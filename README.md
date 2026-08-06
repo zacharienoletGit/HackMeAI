@@ -106,7 +106,7 @@ FASTAPI_URL=http://127.0.0.1:8000
 Pour la démo, la clé admin est:
 
 ```text
-change-moi-admin-local
+allo
 ```
 
 Je l'entre dans `/admin/connexion`, puis je peux créer un utilisateur. La clé
@@ -135,23 +135,3 @@ J'ai aussi nettoyé le ZIP parce qu'il y avait beaucoup de fichiers inutiles:
 - caches
 - un starter Next.js en trop
 - un fichier Python qui contenait du JavaScript
-
-## Ce que je dirais pour expliquer
-
-J'expliquerais le projet comme ça:
-
-Le frontend Next.js sert à l'interface et aux routes serveur. Le backend FastAPI
-sert à la logique importante: sécurité, utilisateurs, historique et appel au
-modèle IA. Les clés sont gardées dans des cookies HTTP-only, donc elles ne sont
-pas exposées directement dans le navigateur.
-
-## À améliorer plus tard
-
-Si je devais continuer le projet, je ferais sûrement ça:
-
-- ajouter des tests automatisés
-- mettre le rate limit dans Redis ou en base
-- ajouter des migrations Alembic
-- mieux gérer les secrets
-- brancher MySQL pour une vraie persistance
-- vérifier automatiquement si llama.cpp est lancé
